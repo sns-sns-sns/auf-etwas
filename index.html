@@ -195,7 +195,7 @@ ul {
       <a href="#" class="w3-bar-item"style="width:25%">About</a>
     </div>
     <div class="w3-half" id="hdimgg">
-      <img src="logo-2.png" alt="Logo" style="align-items: center; max-height: 15px; margin-top: 20px">
+      <img src="logo-4.png" alt="Logo" style="align-items: center; max-height: 20px; margin-top: 20px">
     </div>
   </div>
 
@@ -380,20 +380,25 @@ ul {
     let touchEndY = 0;
 
     function handleScroll(event) {
-      event.preventDefault();
+  event.preventDefault();
 
-      const scrollingDown = event.deltaY > 0;
-      const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
-      const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
+  const scrollingDown = event.deltaY > 0;
+  const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
+  const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
 
-      if (shouldScrollToTop) {
-        container.scrollTop = 0;
-      } else if (shouldScrollToBottom) {
-        container.scrollTop = totalHeight - container.offsetHeight;
-      } else {
-        container.scrollTop += event.deltaY;
-      }
-    }
+  if (shouldScrollToTop) {
+    container.scrollTop = 0;
+  } else if (shouldScrollToBottom) {
+    container.scrollTop = totalHeight - container.offsetHeight;
+  } else {
+    // Clone the list
+    const clonedList = originalList.cloneNode(true);
+    container.appendChild(clonedList);
+
+    container.scrollTop += event.deltaY;
+  }
+}
+
   });
 </script>
 
