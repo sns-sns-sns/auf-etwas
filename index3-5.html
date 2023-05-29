@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;600&display=swap" rel="stylesheet">
+  <title>AUF ETWAS</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    body {
+      font-family: 'Unbounded', cursive;
+      background-color: black;
+
+      background-image:url('project6.gif'); 
+      background-repeat:repeat;
+      background-size:500%;
+      color: white;
+      font-size: 8pt;
+      font-weight: 200;
+       min-height: 100vh;
+    }
+
+p {
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { color: #363636; }
+
+
+a:active { text-decoration: none; }
+
+
+ul {
+    list-style-type: none;
+}
+
+
+.carousel-container {
+  height: 100%; /* Adjust as per your needs */
+  overflow: auto;
+}
+
+.carousel-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.carousel-list li {
+  padding:0px; /* Adjust as per your needs */
+}
+
+.carousel-list li:nth-child(even) {
+  background-color:  /* Adjust as per your needs */
+}
+
+
+
+}
+
+    .header {
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header .left-column {
+      width: 50%;
+    }
+
+    .header .right-column {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .header .right-column img {
+      max-height: 40px;
+    }
+
+    .main {
+      display: flex;
+      height: calc(100vh - 100px);
+      flex-grow: 1;
+    }
+
+    .left-column {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-column img {
+      max-height:85%;
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+    .right-column {
+      width: 50%;
+      overflow-y: scroll;
+    }
+
+    .project {
+      margin-bottom: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .footer {
+      height: 60px;
+      display: flex;
+      align-items: left;
+    }
+
+    .footer .column {
+      width: 25%;
+      text-align: left;
+    }
+
+
+
+
+
+    @media (max-width: 600px) {
+
+
+      .header {
+        flex-direction: column;
+              height: 100px;
+      }
+
+      .header .left-column,
+      .header .right-column {
+        width: 100%;
+      }
+
+      .main {
+        flex-direction: column;
+      }
+
+      .left-column {
+        display: none;
+      }
+
+      .right-column {
+        width: 100%;
+      }
+
+
+      .footer {
+        display:none;
+        }
+
+      #hdimgg img { 
+      margin-top: 0px;
+       margin-bottom: 0px;
+      }
+
+            #hdimgg { 
+      margin-top: 0px;
+       margin-bottom: 0px;
+      }
+
+}
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header w3-bar w3-center">
+    <div class="w3-half w3-center" style="margin-top: 10px">
+      <a href="#" class="w3-bar-item" style="width:25%">Home</a>
+      <a href="#" class="w3-bar-item"style="width:25%">Archive</a>
+      <a href="#" class="w3-bar-item"style="width:25%">Words</a>
+      <a href="#" class="w3-bar-item"style="width:25%">About</a>
+    </div>
+    <div class="w3-half" id="hdimgg">
+      <img src="logo-2.png" alt="Logo" style="align-items: center; max-height: 15px; margin-top: 20px">
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="left-column">
+      <img id="project-image" src="" alt="Hovered Project Image">
+    </div>
+
+    <div class="right-column carousel-container" >
+      <ul class="carousel-list">
+
+      <li><div class="project" onmouseover="showProjectImage('project1.gif')" onmouseout="hideProjectImage()">
+        <p>Zeiss-grossplanetarium</p>
+        <p>     Spatial Media Lab</p>
+        <a href="project1.html">Contentious Constant II</a>
+        <p>PR - Coordination</p>
+      </div></li>
+
+      <li><div class="project" onmouseover="showProjectImage('project2.gif')" onmouseout="hideProjectImage()">
+        <p>B.A.F.P Medias</p>
+        <p>     Spyros Droussiotis</p>     
+        <a href="project2.html">ANIMATEK</a>
+        <p>Head of Production</p>
+      </div></li>
+
+      <li><div class="project" onmouseover="showProjectImage('project3.gif')" onmouseout="hideProjectImage()">
+        <p >Berlin Fashion Week</p>
+        <p >     Olivia Ballard</p>    
+        <a href="project1.html">‘At Dusk’ F/W Show 2023</a>
+        <p>Head of Production</p>
+      </div></li>
+
+      <li><div class="project" onmouseover="showProjectImage('project4.gif')" onmouseout="hideProjectImage()">
+        <p>Berlin Film Festival </p>
+        <a href="project2.html">CFP 2019</a>
+        <p>Production & Project Management</p>
+      </div></li>
+
+      <li><div class="project" onmouseover="showProjectImage('project5.jpg')" onmouseout="hideProjectImage()">
+         <p>Dreck Magazine</p>
+       <p>     Spyros Droussiotis</p>  
+        <a href="project1.html">Boys Don't Cry</a>
+        <p>Head of Production</p>
+      </div></li>
+
+      <li><div class="project" onmouseover="showProjectImage('project6.gif')" onmouseout="hideProjectImage()">
+        <p>MARCHÉ DU FILM FESTIVAL DE CANNES</p>
+        <a href="project2.html">EX</a>
+        <p>Production Administration - Communications</p>
+      </div></li>
+
+        <li><div class="project" onmouseover="showProjectImage('project7.gif')" onmouseout="hideProjectImage()">
+        <p>IONIQ 5 Hyundai </p>
+        <a href="project1.html">Nature in charge "The Journey"</a>
+        <p>Producer</p>
+      </div></li>
+
+      <li><div class="project" onmouseover="showProjectImage('project8.jpg')" onmouseout="hideProjectImage()">
+        <p>i-D Germany</p>
+        <a href="project2.html">"OUT OF OFFICE"</a>
+        <p>Producer</p>
+      </div></li>
+
+      <li><div class="project" onmouseover="showProjectImage('project9.gif')" onmouseout="hideProjectImage()">
+        <p>Les Migras</p>
+        <a href="project2.html">In these times: A QTIBIPOC Portrait series</a>
+        <p>Producer</p>
+      </div></li>
+
+       <li><div class="project" onmouseover="showProjectImage('project10.jpg')" onmouseout="hideProjectImage()">
+        <p>Metal Magazine</p>
+        <a href="project2.html">Abyss X "At home with discomfort"</a>
+        <p>Head of Production</p>
+      </div></li>
+
+      <li><div class="project" onmouseover="showProjectImage('project11.gif')" onmouseout="hideProjectImage()">
+        <p>MTV GERMANY UK ASIA </p>
+        <a href="project2.html">OUT! LOUD! PROUD!</a>
+        <p>Head of Production</p>
+      </div></li>
+
+      <li><div class="project" onmouseover="showProjectImage('project12.gif')" onmouseout="hideProjectImage()">
+       <p>MTV GERMANY</p>
+        <a href="project2.html">The Invisible Orientation</a>
+        <p>Head of Production, Casting, Post Production</p>
+      </div></li>
+
+          <li><div class="project" onmouseover="showProjectImage('project13.jpg')" onmouseout="hideProjectImage()">
+        <p>PW Magazine</p>
+        <a href="project2.html">Abyss X "The Sound of Sirens"</a>
+        <p>Head of Production</p>
+      </div></li>
+
+          <li><div class="project" onmouseover="showProjectImage('project14.gif')" onmouseout="hideProjectImage()">
+         <p>Raster Noton</p>
+        <a href="project2.html">R-N WHITE CIRCLE Modern Matters</a>
+        <p>PR - Coordination</p>
+      </div></li>
+
+         <li><div class="project" onmouseover="showProjectImage('project15.gif')" onmouseout="hideProjectImage()">
+        <a href="project2.html">Artist Manager Artist Liaison Stage Management</a>
+      </div></li>
+
+          <li><div class="project" onmouseover="showProjectImage('project16.gif')" onmouseout="hideProjectImage()">
+        <p>Condé Nast Germany</p>
+        <a href="project2.html">Vogue Germany & Cartier</a>
+         <p style="font-size:8px;">C .Fount</p>
+        <p>Production</p>
+      </div></li>
+
+
+          <div class="project" onmouseover="showProjectImage('project17.gif')" onmouseout="hideProjectImage()">
+        <p>MDLBEAST</p>
+        <a href="project2.html">XP MUSIC FUTURES</a>
+         <p style="font-size:8px;">VideLab</p>
+        <p>Booking Team</p>
+      </div></li>
+
+          <div class="project" onmouseover="showProjectImage('project18.gif')" onmouseout="hideProjectImage()">
+        <p>Zeiss-Großplanetarium</p>
+
+        <a href="project2.html">FUSE* PRESENTS
+»MULTIVERSE .DOME« & »LUNA SOMNIUM .DOME«</a>
+        <p>PR - Coordination</p>
+      </div></li>
+
+
+</ul>
+  </div>
+
+
+
+      <!-- Repeat the above project divs for the rest of the projects -->
+    </div>
+  </main>
+
+  <footer class="w3-bar footer">
+
+    <div class="w3-quarter w3-left" id="foot">
+      <p style="margin-left: 20px; margin-top: 20px;">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="w3-quarter w3-left" id="foot">
+      <a href="#" class="w3-bar-item"></a>
+    </div>
+    <div class="w3-quarter w3-left" id="foot"> 
+      <p style="margin-top: 20px"> &copy; 2023 Your Name. All rights reserved.</p>
+    </div>
+    <div class="w3-quarter w3-left" id="ftimg">
+      <img src="reach-2.png" alt="Footer Image"  style=" max-height: 15px; margin-top: 20px; margin-right: 20px; align-items: right;">
+    </div>
+  </footer>
+
+  <script>
+    function showProjectImage(imageUrl) {
+      var projectImage = document.getElementById('project-image');
+      projectImage.setAttribute('src', imageUrl);
+      projectImage.style.display = 'block';
+    }
+
+    function hideProjectImage() {
+      var projectImage = document.getElementById('project-image');
+      projectImage.style.display = 'none';
+    }
+
+// Select the carousel container
+const container = document.querySelector('.carousel-container');
+
+// Clone the list
+const originalList = document.querySelector('.carousel-list');
+const clonedList = originalList.cloneNode(true);
+container.appendChild(clonedList);
+
+// Calculate the total height of the list
+const totalHeight = originalList.offsetHeight * 2;
+
+// Add event listener for mouse wheel scrolling
+container.addEventListener('wheel', event => {
+  event.preventDefault();
+
+  const scrollingDown = event.deltaY > 0;
+  const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
+  const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
+
+  if (shouldScrollToTop) {
+    container.scrollTop = 0;
+  } else if (shouldScrollToBottom) {
+    container.scrollTop = totalHeight - container.offsetHeight;
+  } else {
+    container.scrollTop += event.deltaY;
+  }
+});
+
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+  background-color: black;
+  color: white;
+  font-size: 10pt;
+}
+
+.w3-bar-item {
+  color: white;
+}
+
+.w3-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.w3-right-align {
+  text-align: right;
+}
+
+#left-column {
+  position: relative;
+}
+
+#project-image {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#project-list .w3-ul li {
+  cursor: pointer;
+}
+
+#project-list .w3-ul li:hover {
+  background-color: #555;
+}

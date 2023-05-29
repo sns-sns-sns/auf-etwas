@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;600&display=swap" rel="stylesheet">
+  <title>AUF ETWAS</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    body {
+      font-family: 'Unbounded', cursive;
+      background-color: black;
+
+      background-image:url('project6.gif'); 
+background-repeat:repeat;
+background-size:500%;
+      color: white;
+      font-size: 8pt;
+      font-weight: 200;
+    }
+
+p {
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { color: #363636; }
+
+
+a:active { text-decoration: none; }
+
+
+ul {
+    list-style-type: none;
+}
+
+
+.carousel-container {
+  height: 100%; /* Adjust as per your needs */
+  overflow: auto;
+}
+
+.carousel-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-list li {
+  padding: 10px; /* Adjust as per your needs */
+}
+
+.carousel-list li:nth-child(even) {
+  background-color: /* Adjust as per your needs */
+}
+
+
+
+
+    .header {
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header .left-column {
+      width: 50%;
+    }
+
+    .header .right-column {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .header .right-column img {
+      max-height: 40px;
+    }
+
+    .main {
+      display: flex;
+      height: calc(100vh - 100px);
+    }
+
+    .left-column {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-column img {
+      max-height:85%;
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+    .right-column {
+      width: 50%;
+      overflow-y: scroll;
+    }
+
+    .project {
+      margin-bottom: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .footer {
+      height: 60px;
+      display: flex;
+      align-items: left;
+    }
+
+    .footer .column {
+      width: 25%;
+      text-align: left;
+    }
+
+    @media (max-width: 600px) {
+
+
+      .header {
+        flex-direction: column;
+              height: 80px;
+      }
+
+      .header .left-column,
+      .header .right-column {
+        width: 100%;
+      }
+
+      .main {
+        flex-direction: column;
+      }
+
+      .left-column {
+        display: none;
+      }
+
+
+
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header w3-bar w3-center">
+    <div class="w3-half w3-center">
+      <a href="#" class="w3-bar-item" style="width:25%">Home</a>
+      <a href="#" class="w3-bar-item"style="width:25%">Archive</a>
+      <a href="#" class="w3-bar-item"style="width:25%">Words</a>
+      <a href="#" class="w3-bar-item"style="width:25%">About</a>
+    </div>
+    <div class="w3-half">
+      <img src="logo-2.png" alt="Logo" class="w3-image w3-center" style="max-height: 15px;">
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="left-column">
+      <img id="project-image" src="" alt="Hovered Project Image">
+    </div>
+
+    <div class="right-column w3-margin">
+
+ <div class="carousel-container">
+  <ul class="carousel-list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+        <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+        <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+        <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+        <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+        <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+        <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+        <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+        <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+        <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+
+    <!-- Add more list items as needed -->
+  </ul>
+</div>
+
+
+  </div>
+
+
+
+      <!-- Repeat the above project divs for the rest of the projects -->
+    </div>
+  </main>
+
+  <footer class="w3-bar">
+    <div class="w3-quarter w3-left">
+      <p style="margin-left: 20px;">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="w3-quarter w3-left">
+      <a href="#" class="w3-bar-item"></a>
+    </div>
+    <div class="w3-quarter w3-left">
+      <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </div>
+    <div class="w3-quarter w3-left" >
+      <img src="reach-2.png" alt="Footer Image" class="w3-image w3-right" style="max-height: 15px; margin-right: 20px;">
+    </div>
+  </footer>
+
+  <script>
+    function showProjectImage(imageUrl) {
+      var projectImage = document.getElementById('project-image');
+      projectImage.setAttribute('src', imageUrl);
+      projectImage.style.display = 'block';
+    }
+
+    function hideProjectImage() {
+      var projectImage = document.getElementById('project-image');
+      projectImage.style.display = 'none';
+    }
+
+// Select the carousel container
+const container = document.querySelector('.carousel-container');
+
+// Add event listener for mouse wheel scrolling
+container.addEventListener('wheel', event => {
+  event.preventDefault();
+
+  const scrollingDown = event.deltaY > 0;
+  const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= container.scrollHeight;
+  const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
+
+  if (shouldScrollToTop) {
+    container.scrollTop = 0;
+  } else if (shouldScrollToBottom) {
+    container.scrollTop = container.scrollHeight;
+  } else {
+    container.scrollTop += event.deltaY;
+  }
+});
+
+
+
+
+  </script>
+</body>
+</html>
