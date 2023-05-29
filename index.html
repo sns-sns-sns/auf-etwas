@@ -349,28 +349,18 @@ ul {
   </footer>
 
   <script>
-    function showProjectImage(imageUrl) {
-      var projectImage = document.getElementById('project-image');
-      projectImage.setAttribute('src', imageUrl);
-      projectImage.style.display = 'block';
-    }
-
-    function hideProjectImage() {
-      var projectImage = document.getElementById('project-image');
-      projectImage.style.display = 'none';
-    }
-
   function showProjectImage(imageUrl) {
-      var projectImage = document.getElementById('project-image');
-      projectImage.setAttribute('src', imageUrl);
-      projectImage.style.display = 'block';
-    }
+    var projectImage = document.getElementById('project-image');
+    projectImage.setAttribute('src', imageUrl);
+    projectImage.style.display = 'block';
+  }
 
-    function hideProjectImage() {
-      var projectImage = document.getElementById('project-image');
-      projectImage.style.display = 'none';
-    }
+  function hideProjectImage() {
+    var projectImage = document.getElementById('project-image');
+    projectImage.style.display = 'none';
+  }
 
+  document.addEventListener('DOMContentLoaded', function() {
     // Select the carousel container
     const container = document.querySelector('.carousel-container');
 
@@ -384,7 +374,6 @@ ul {
 
     // Add event listeners for both mouse and touch events
     container.addEventListener('wheel', handleScroll);
-
 
     // Variables to track touch events
     let touchStartY = 0;
@@ -405,11 +394,9 @@ ul {
         container.scrollTop += event.deltaY;
       }
     }
+  });
+</script>
 
-   
 
-
-
-  </script>
 </body>
 </html>
