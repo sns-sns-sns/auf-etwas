@@ -182,7 +182,7 @@ ul {
 
 }
 
-    }
+    
 
   </style>
 </head>
@@ -360,34 +360,71 @@ ul {
       projectImage.style.display = 'none';
     }
 
-// Select the carousel container
-const container = document.querySelector('.carousel-container');
+  function showProjectImage(imageUrl) {
+      var projectImage = document.getElementById('project-image');
+      projectImage.setAttribute('src', imageUrl);
+      projectImage.style.display = 'block';
+    }
 
-// Clone the list
-const originalList = document.querySelector('.carousel-list');
-const clonedList = originalList.cloneNode(true);
-container.appendChild(clonedList);
+    function hideProjectImage() {
+      var projectImage = document.getElementById('project-image');
+      projectImage.style.display = 'none';
+    }
 
-// Calculate the total height of the list
-const totalHeight = originalList.offsetHeight * 2;
+    // Select the carousel container
+    const container = document.querySelector('.carousel-container');
 
-// Add event listener for mouse wheel scrolling
-container.addEventListener('wheel', event => {
-  event.preventDefault();
+    // Clone the list
+    const originalList = document.querySelector('.carousel-list');
+    const clonedList = originalList.cloneNode(true);
+    container.appendChild(clonedList);
 
-  const scrollingDown = event.deltaY > 0;
-  const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
-  const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
+    // Calculate the total height of the list
+    const totalHeight = originalList.offsetHeight * 2;
 
-  if (shouldScrollToTop) {
-    container.scrollTop = 0;
-  } else if (shouldScrollToBottom) {
-    container.scrollTop = totalHeight - container.offsetHeight;
-  } else {
-    container.scrollTop += event.deltaY;
-  }
-});
+    // Add event listeners for both mouse and touch events
+    container.addEventListener('wheel', handleScroll);
+    container.addEventListener('touchstart', handleTouchStart);
+    container.addEventListener('touchmove', handleTouchMove);
+    container.addEventListener('touchend', handleTouchEnd);
 
+    // Variables to track touch events
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    function handleScroll(event) {
+      event.preventDefault();
+
+      const scrollingDown = event.deltaY > 0;
+      const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
+      const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
+
+      if (shouldScrollToTop) {
+        container.scrollTop = 0;
+      } else if (shouldScrollToBottom) {
+        container.scrollTop = totalHeight - container.offsetHeight;
+      } else {
+        container.scrollTop += event.deltaY;
+      }
+    }
+
+    function handleTouchStart(event) {
+      touchStartY = event.touches[0].clientY;
+    }
+
+    function handleTouchMove(event) {
+      touchEndY = event.touches[0].clientY;
+    }
+
+    function handleTouchEnd() {
+      const touchDeltaY = touchEndY - touchStartY;
+
+      if (touchDeltaY > 0) {
+        container.scrollTop -= touchDeltaY;
+      } else if (touchDeltaY < 0) {
+        container.scrollTop -= touchDeltaY;
+      }
+    }
 
 
 
