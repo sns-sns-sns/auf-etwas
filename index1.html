@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;600&display=swap" rel="stylesheet">
+  <title>AUF ETWAS</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    body {
+      font-family: 'Unbounded', cursive;
+background-image:url('project6.gif'); 
+background-repeat:repeat;
+background-size:500%;
+      background-color: black;
+      color: white;
+      font-size: 8pt;
+    }
+
+p {
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { color: #363636; }
+
+
+a:active { text-decoration: none; }
+
+
+
+
+    .header {
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header .left-column {
+      width: 50%;
+    }
+
+    .header .right-column {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .header .right-column img {
+      max-height: 40px;
+    }
+
+    .main {
+      display: flex;
+      height: calc(100vh - 100px);
+    }
+
+    .left-column {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-column img {
+      max-height:85%;
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+    .right-column {
+      width: 50%;
+      overflow-y: scroll;
+    }
+
+    .project {
+      margin-bottom: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .footer {
+      height: 60px;
+      display: flex;
+      align-items: left;
+    }
+
+    .footer .column {
+      width: 25%;
+      text-align: left;
+    }
+
+    @media (max-width: 600px) {
+
+
+      .header {
+        flex-direction: column;
+              height: 80px;
+      }
+
+      .header .left-column,
+      .header .right-column {
+        width: 100%;
+      }
+
+      .main {
+        flex-direction: column;
+      }
+
+      .left-column {
+        display: none;
+      }
+
+
+
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header w3-bar w3-center">
+    <div class="w3-half w3-center">
+      <a href="#" class="w3-bar-item" style="width:25%">Home</a>
+      <a href="#" class="w3-bar-item"style="width:25%">Archive</a>
+      <a href="#" class="w3-bar-item"style="width:25%">Words</a>
+      <a href="#" class="w3-bar-item"style="width:25%">About</a>
+    </div>
+    <div class="w3-half">
+      <img src="logo-1.png" alt="Logo" class="w3-image w3-center" style="max-height: 15px;">
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="left-column">
+      <img id="project-image" src="" alt="Hovered Project Image">
+    </div>
+
+    <div class="right-column w3-margin">
+
+      <div class="project" onmouseover="showProjectImage('project1.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">Zeiss-grossplanetarium</p>
+        <p style="font-size:13px; font-weight:300;">     Spatial Media Lab</p>
+        <a href="project1.html">Contentious Constant II</a>
+        <p>PR - Coordination</p>
+      </div>
+
+      <div class="project" onmouseover="showProjectImage('project2.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">B.A.F.P Medias</p>
+        <p style="font-size:13px; font-weight:300;">     Spyros Droussiotis</p>     
+        <a href="project2.html">ANIMATEK</a>
+        <p>Head of Production</p>
+      </div>
+
+      <div class="project" onmouseover="showProjectImage('project3.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">Berlin Fashion Week</p>
+        <p style="font-size:13px; font-weight:300;">     Olivia Ballard</p>    
+        <a href="project1.html">‘At Dusk’ F/W Show 2023</a>
+        <p>Head of Production</p>
+      </div>
+
+      <div class="project" onmouseover="showProjectImage('project4.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">Berlin Film Festival </p>
+        <a href="project2.html">CFP 2019</a>
+        <p>Production & Project Management</p>
+      </div>
+
+      <div class="project" onmouseover="showProjectImage('project5.jpg')" onmouseout="hideProjectImage()">
+         <p style="font-size:15px; font-weight:400;">Dreck Magazine</p>
+       <p style="font-size:13px; font-weight:300;">     Spyros Droussiotis</p>  
+        <a href="project1.html">Boys Don't Cry</a>
+        <p>Head of Production</p>
+      </div>
+
+      <div class="project" onmouseover="showProjectImage('project6.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">MARCHÉ DU FILM FESTIVAL DE CANNES</p>
+        <a href="project2.html">EX</a>
+        <p>Production Administration - Communications</p>
+      </div>
+
+        <div class="project" onmouseover="showProjectImage('project7.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">IONIQ 5 Hyundai </p>
+        <a href="project1.html">Nature in charge "The Journey"</a>
+        <p>Producer</p>
+      </div>
+
+      <div class="project" onmouseover="showProjectImage('project8.jpg')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">i-D Germany</p>
+        <a href="project2.html">"OUT OF OFFICE"</a>
+        <p>Producer</p>
+      </div>
+
+      <div class="project" onmouseover="showProjectImage('project9.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">Les Migras</p>
+        <a href="project2.html">In these times: A QTIBIPOC Portrait series</a>
+        <p>Producer</p>
+      </div>
+
+       <div class="project" onmouseover="showProjectImage('project10.jpg')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">Metal Magazine</p>
+        <a href="project2.html">Abyss X "At home with discomfort"</a>
+        <p>Head of Production</p>
+      </div>
+
+      <div class="project" onmouseover="showProjectImage('project11.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">MTV GERMANY UK ASIA </p>
+        <a href="project2.html">OUT! LOUD! PROUD!</a>
+        <p>Head of Production</p>
+      </div>
+
+      <div class="project" onmouseover="showProjectImage('project12.gif')" onmouseout="hideProjectImage()">
+       <p style="font-size:15px; font-weight:400;">MTV GERMANY</p>
+        <a href="project2.html">The Invisible Orientation</a>
+        <p>Head of Production, Casting, Post Production</p>
+      </div>
+
+          <div class="project" onmouseover="showProjectImage('project13.jpg')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">PW Magazine</p>
+        <a href="project2.html">Abyss X "The Sound of Sirens"</a>
+        <p>Head of Production</p>
+      </div>
+
+          <div class="project" onmouseover="showProjectImage('project14.gif')" onmouseout="hideProjectImage()">
+         <p style="font-size:15px; font-weight:400;">Raster Noton</p>
+        <a href="project2.html">R-N WHITE CIRCLE Modern Matters</a>
+        <p>PR - Coordination</p>
+      </div>
+
+         <div class="project" onmouseover="showProjectImage('project15.gif')" onmouseout="hideProjectImage()">
+        <a style="font-size:15px; font-weight:400;" href="project2.html">Artist Manager Artist Liaison Stage Management</a>
+      </div>
+
+          <div class="project" onmouseover="showProjectImage('project16.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">Condé Nast Germany</p>
+        <a href="project2.html">Vogue Germany & Cartier</a>
+         <p style="font-size:8px;">C .Fount</p>
+        <p>Production</p>
+      </div>
+
+
+          <div class="project" onmouseover="showProjectImage('project17.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">MDLBEAST</p>
+        <a href="project2.html">XP MUSIC FUTURES</a>
+         <p style="font-size:8px;">VideLab</p>
+        <p>Booking Team</p>
+      </div>
+
+          <div class="project" onmouseover="showProjectImage('project18.gif')" onmouseout="hideProjectImage()">
+        <p style="font-size:15px; font-weight:400;">Zeiss-Großplanetarium</p>
+
+        <a href="project2.html">FUSE* PRESENTS
+»MULTIVERSE .DOME« & »LUNA SOMNIUM .DOME«</a>
+        <p>PR - Coordination</p>
+      </div>
+
+  </div>
+
+
+
+      <!-- Repeat the above project divs for the rest of the projects -->
+    </div>
+  </main>
+
+  <footer class="w3-bar">
+    <div class="w3-quarter w3-left">
+      <p style="margin-left: 20px;">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="w3-quarter w3-left">
+      <a href="#" class="w3-bar-item"></a>
+    </div>
+    <div class="w3-quarter w3-left">
+      <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </div>
+    <div class="w3-quarter w3-left" >
+      <img src="reach-1.png" alt="Footer Image" class="w3-image w3-right" style="max-height: 15px; margin-right: 20px;">
+    </div>
+  </footer>
+
+  <script>
+    function showProjectImage(imageUrl) {
+      var projectImage = document.getElementById('project-image');
+      projectImage.setAttribute('src', imageUrl);
+      projectImage.style.display = 'block';
+    }
+
+    function hideProjectImage() {
+      var projectImage = document.getElementById('project-image');
+      projectImage.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
