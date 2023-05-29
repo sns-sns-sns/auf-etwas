@@ -384,9 +384,7 @@ ul {
 
     // Add event listeners for both mouse and touch events
     container.addEventListener('wheel', handleScroll);
-    container.addEventListener('touchstart', handleTouchStart);
-    container.addEventListener('touchmove', handleTouchMove);
-    container.addEventListener('touchend', handleTouchEnd);
+
 
     // Variables to track touch events
     let touchStartY = 0;
@@ -408,23 +406,7 @@ ul {
       }
     }
 
-    function handleTouchStart(event) {
-      touchStartY = event.touches[0].clientY;
-    }
-
-    function handleTouchMove(event) {
-      touchEndY = event.touches[0].clientY;
-    }
-
-    function handleTouchEnd() {
-      const touchDeltaY = touchEndY - touchStartY;
-
-      if (touchDeltaY > 0) {
-        container.scrollTop -= touchDeltaY;
-      } else if (touchDeltaY < 0) {
-        container.scrollTop -= touchDeltaY;
-      }
-    }
+   
 
 
 
