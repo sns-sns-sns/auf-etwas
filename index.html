@@ -32,16 +32,15 @@ p {
 
 
 
-a:link { text-decoration: underline; }
+a {
+    text-decoration: none;
+    color: #adadad;
+    transition: color 0.3s;
+  }
 
-
-a:visited { text-decoration: none; }
-
-
-a:hover { color: #363636; }
-
-
-a:active { text-decoration: none; }
+  a:hover {
+    color: #363636;
+  }
 
 
 ul {
@@ -183,14 +182,15 @@ ul {
 </head>
 <body>
 
- <div class="header w3-bar w3-center">
+  <div class="header w3-bar w3-center">
     <div class="w3-half w3-center" style="margin-top: 10px">
-            <a href="https://sns-sns-sns.github.io/auf-etwas/about.html" class="w3-bar-item"style="width:33.3%">About</a>
-      <a href="https://sns-sns-sns.github.io/auf-etwas/services.html" class="w3-bar-item" style="width:33.3%">Services & Clients</a>
-      <a href="https://www.instagram.com/evamikelatou?utm_source=qr" class="w3-bar-item"style="width:33.3%">Instagram</a>
+      <a href="services.html" class="w3-bar-item" style="width:25%">Services</a>
+      <a href="clients.html" class="w3-bar-item"style="width:25%">Clients</a>
+      <a href="about.html" class="w3-bar-item"style="width:25%">About</a>
+      <a href="" class="w3-bar-item"style="width:25%">Instagram</a>
     </div>
     <div class="w3-half">
-      <a href="https://sns-sns-sns.github.io/auf-etwas/index.html">
+      <a href="index.html">
       <img src="logo-4.png" alt="Logo" style="align-items: center; max-height: 20px; margin-top: 15px; margin-bottom: 15px;">
     </a>
     </div>
@@ -348,78 +348,63 @@ ul {
 
   <script>
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Select the carousel container
-  const container = document.querySelector('.carousel-container');
 
-  // Clone the list
-  const originalList = document.querySelector('.carousel-list');
-  const clonedList = originalList.cloneNode(true);
-  container.appendChild(clonedList);
 
-  // Calculate the total height of the list
-  const totalHeight = originalList.offsetHeight * 2;
 
-  // Add event listeners for both mouse and touch events
-  container.addEventListener('wheel', handleScroll);
-  container.addEventListener('touchstart', handleTouchStart);
-  container.addEventListener('touchmove', handleTouchMove);
-  container.addEventListener('touchend', handleTouchEnd);
 
-  // Variables to track touch events
-  let touchStartY = 0;
-  let touchEndY = 0;
 
-  function handleScroll(event) {
-    event.preventDefault();
 
-    const scrollingDown = event.deltaY > 0;
-    const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
-    const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
-
-    if (shouldScrollToTop) {
-      container.scrollTop = 0;
-    } else if (shouldScrollToBottom) {
-      container.scrollTop = totalHeight - container.offsetHeight;
-    } else {
-      // Clone the list
-      const clonedList = originalList.cloneNode(true);
-      container.appendChild(clonedList);
-
-      container.scrollTop += event.deltaY;
-    }
+  function showProjectImage(imageUrl) {
+    var projectImage = document.getElementById('project-image');
+    projectImage.setAttribute('src', imageUrl);
+    projectImage.style.display = 'block';
   }
 
-  function handleTouchStart(event) {
-    touchStartY = event.touches[0].clientY;
+  function hideProjectImage() {
+    var projectImage = document.getElementById('project-image');
+    projectImage.style.display = 'none';
   }
 
-  function handleTouchMove(event) {
-    touchEndY = event.touches[0].clientY;
-    event.preventDefault();
+  document.addEventListener('DOMContentLoaded', function() {
+    // Select the carousel container
+    const container = document.querySelector('.carousel-container');
+
+    // Clone the list
+    const originalList = document.querySelector('.carousel-list');
+    const clonedList = originalList.cloneNode(true);
+    container.appendChild(clonedList);
+
+    // Calculate the total height of the list
+    const totalHeight = originalList.offsetHeight * 2;
+
+    // Add event listeners for both mouse and touch events
+    container.addEventListener('wheel', handleScroll);
+
+    // Variables to track touch events
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    function handleScroll(event) {
+  event.preventDefault();
+
+  const scrollingDown = event.deltaY > 0;
+  const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
+  const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
+
+  if (shouldScrollToTop) {
+    container.scrollTop = 0;
+  } else if (shouldScrollToBottom) {
+    container.scrollTop = totalHeight - container.offsetHeight;
+  } else {
+    // Clone the list
+    const clonedList = originalList.cloneNode(true);
+    container.appendChild(clonedList);
+
+    container.scrollTop += event.deltaY;
   }
+}
 
-  function handleTouchEnd() {
-    const touchDeltaY = touchEndY - touchStartY;
-    const scrollingDown = touchDeltaY > 0;
-    const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
-    const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
-
-    if (shouldScrollToTop) {
-      container.scrollTop = 0;
-    } else if (shouldScrollToBottom) {
-      container.scrollTop = totalHeight - container.offsetHeight;
-    } else {
-      // Clone the list
-      const clonedList = originalList.cloneNode(true);
-      container.appendChild(clonedList);
-
-      container.scrollTop += touchDeltaY;
-    }
-  }
-});
-
-
+  });
 </script>
 
 

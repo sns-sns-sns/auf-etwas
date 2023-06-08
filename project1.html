@@ -32,84 +32,21 @@ p {
 
 
 
-a:link { text-decoration: none; }
+a {
+    text-decoration: none;
+    color: #adadad;
+    transition: color 0.3s;
+  }
 
-
-a:visited { text-decoration: none; }
-
-
-a:hover { color: #363636; }
-
-
-a:active { text-decoration: none; }
+  a:hover {
+    color: #363636;
+  }
 
 
 ul {
     list-style-type: none;
     margin-left: 0;
 }
-
-
-
-.bg {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url('trans2.png') repeat 0 0;
-    background-repeat: repeat;
-    animation: bg-animation 30s infinite;
-    opacity: .1;
-    visibility: visible;
-
-  }
-
-  @keyframes bg-animation {
-      0% { transform: translate(0,0) }
-      10% { transform: translate(-5%,-5%) }
-      20% { transform: translate(-10%,5%) }
-      30% { transform: translate(5%,-10%) }
-      40% { transform: translate(-5%,15%) }
-      50% { transform: translate(-10%,5%) }
-      60% { transform: translate(15%,0) }
-      70% { transform: translate(0,10%) }
-      80% { transform: translate(-15%,0) }
-      90% { transform: translate(10%,5%) }
-      100% { transform: translate(5%,0) }
-  }
-
-.bg1 {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url('trans2.png') repeat 0 0;
-    background-repeat: repeat;
-    animation: bg-animation1 40s infinite;
-    opacity: .1;
-    visibility: visible;
-/
-  }
-
-  @keyframes bg-animation1 {
-      0% { transform: translate(0,0) }
-      10% { transform: translate(-5%,-5%) }
-      20% { transform: translate(-10%,5%) }
-      30% { transform: translate(5%,-10%) }
-      40% { transform: translate(-5%,15%) }
-      50% { transform: translate(-10%,5%) }
-      60% { transform: translate(15%,0) }
-      70% { transform: translate(0,10%) }
-      80% { transform: translate(-15%,0) }
-      90% { transform: translate(10%,5%) }
-      100% { transform: translate(5%,0) }
-  }
 
 
 
@@ -279,8 +216,6 @@ ul {
     </a>
     </div>
   </div>
-
-
 
 
 
