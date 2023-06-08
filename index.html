@@ -348,57 +348,79 @@ ul {
 
 
   <script>
-  function showProjectImage(imageUrl) {
-    var projectImage = document.getElementById('project-image');
-    projectImage.setAttribute('src', imageUrl);
-    projectImage.style.display = 'block';
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Select the carousel container
+  const container = document.querySelector('.carousel-container');
+
+  // Clone the list
+  const originalList = document.querySelector('.carousel-list');
+  const clonedList = originalList.cloneNode(true);
+  container.appendChild(clonedList);
+
+  // Calculate the total height of the list
+  const totalHeight = originalList.offsetHeight * 2;
+
+  // Add event listeners for both mouse and touch events
+  container.addEventListener('wheel', handleScroll);
+  container.addEventListener('touchstart', handleTouchStart);
+  container.addEventListener('touchmove', handleTouchMove);
+  container.addEventListener('touchend', handleTouchEnd);
+
+  // Variables to track touch events
+  let touchStartY = 0;
+  let touchEndY = 0;
+
+  function handleScroll(event) {
+    event.preventDefault();
+
+    const scrollingDown = event.deltaY > 0;
+    const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
+    const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
+
+    if (shouldScrollToTop) {
+      container.scrollTop = 0;
+    } else if (shouldScrollToBottom) {
+      container.scrollTop = totalHeight - container.offsetHeight;
+    } else {
+      // Clone the list
+      const clonedList = originalList.cloneNode(true);
+      container.appendChild(clonedList);
+
+      container.scrollTop += event.deltaY;
+    }
   }
 
-  function hideProjectImage() {
-    var projectImage = document.getElementById('project-image');
-    projectImage.style.display = 'none';
+  function handleTouchStart(event) {
+    touchStartY = event.touches[0].clientY;
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // Select the carousel container
-    const container = document.querySelector('.carousel-container');
-
-    // Clone the list
-    const originalList = document.querySelector('.carousel-list');
-    const clonedList = originalList.cloneNode(true);
-    container.appendChild(clonedList);
-
-    // Calculate the total height of the list
-    const totalHeight = originalList.offsetHeight * 2;
-
-    // Add event listeners for both mouse and touch events
-    container.addEventListener('wheel', handleScroll);
-
-    // Variables to track touch events
-    let touchStartY = 0;
-    let touchEndY = 0;
-
-    function handleScroll(event) {
-  event.preventDefault();
-
-  const scrollingDown = event.deltaY > 0;
-  const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
-  const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
-
-  if (shouldScrollToTop) {
-    container.scrollTop = 0;
-  } else if (shouldScrollToBottom) {
-    container.scrollTop = totalHeight - container.offsetHeight;
-  } else {
-    // Clone the list
-    const clonedList = originalList.cloneNode(true);
-    container.appendChild(clonedList);
-
-    container.scrollTop += event.deltaY;
+  function handleTouchMove(event) {
+    touchEndY = event.touches[0].clientY;
+    event.preventDefault();
   }
-}
 
-  });
+  function handleTouchEnd() {
+    const touchDeltaY = touchEndY - touchStartY;
+    const scrollingDown = touchDeltaY > 0;
+    const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
+    const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
+
+    if (shouldScrollToTop) {
+      container.scrollTop = 0;
+    } else if (shouldScrollToBottom) {
+      container.scrollTop = totalHeight - container.offsetHeight;
+    } else {
+      // Clone the list
+      const clonedList = originalList.cloneNode(true);
+      container.appendChild(clonedList);
+
+      container.scrollTop += touchDeltaY;
+    }
+  }
+});
+
+
 </script>
 
 
