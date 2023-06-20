@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+  <title>AUF ETWAS</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+
+
+  <style>
+    body {
+      font-family: 'Unbounded', cursive;
+      background-color: black;
+
+      color: white;
+    font-size: 10pt;
+      font-weight: 200;
+       min-height: 100vh;
+                    margin: 0;
+      padding: 0;
+      background: url('back1.gif') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+p {
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #adadad;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #363636;
+  }
+
+
+ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as per your requirements */
+}
+
+.text-div {
+  text-align: center;
+  position: relative;
+}
+
+.text-div p {
+  /* Styles for the text within the div */
+}
+
+
+
+.carousel-container {
+  height: 100%; /* Adjust as per your needs */
+  overflow: auto;
+}
+
+.carousel-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  padding-left: 5px;
+}
+
+
+.carousel-list li {
+  padding:3px;
+
+}
+
+.carousel-list li:nth-child(even) {
+  background-color:  /* Adjust as per your needs */
+}
+
+}
+
+    .header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header .left-column {
+      width: 50%;
+    }
+
+    .header .right-column {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .header .right-column img {
+      max-height: 40px;
+    }
+
+    .main {
+      display: flex;
+      height: calc(100vh - 100px);
+      flex-grow: 1;
+    }
+
+    .left-column {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-column img {
+      max-height:85%;
+      top: 50%;
+      left: 30%;
+    }
+
+.left-column video {
+      max-height: 85%;
+      top: 50%;
+      left: 30%;
+      outline: none; /* Remove the outline when video is clicked */
+    }
+
+    .left-column video::-webkit-media-controls-panel {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+     .left-column video::-webkit-media-controls-mute-button,
+    .left-column video::-webkit-media-controls-play-button,
+    .left-column video::-webkit-media-controls-timeline,
+    .left-column video::-webkit-media-controls-current-time-display,
+    .left-column video::-webkit-media-controls-time-remaining-display,
+      display: none; /* Hide unwanted controls */
+    }
+
+    .left-column video::-webkit-media-controls-volume-slider {
+      display: flex; /* Display volume control */
+      flex-grow: 1;
+    }
+
+
+    .right-column {
+      width: 50%;
+      overflow-y: scroll;
+    }
+
+    .project {
+      margin-bottom: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .footer {
+      height: 40px;
+      display: flex;
+      align-items: left;
+    }
+
+    .footer .column {
+      width: 25%;
+      text-align: left;
+    }
+
+
+
+
+
+    @media (max-width: 600px) {
+
+
+      .header {
+        flex-direction: column;
+              height: 100px;
+      }
+
+      .header .left-column,
+      .header .right-column {
+        width: 100%;
+      }
+
+      .main {
+        flex-direction: column;
+      }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+      .right-column {
+        width: 100%;
+      }
+
+
+      .footer {
+        display:none;
+        }
+
+ .left-column video {
+    max-width: 450px; /* Set the maximum width for the video */
+    width: 100%; /* Make the video fill the available width */
+    height: auto; /* Let the height adjust automatically */
+    top: initial;
+    left: initial;
+  }
+
+}
+
+    
+
+  </style>
+</head>
+<body>
+
+
+
+ <div class="header w3-bar w3-center">
+    <div class="w3-half w3-center" style="margin-top: 10px">
+            <a href="https://sns-sns-sns.github.io/auf-etwas/about.html" class="w3-bar-item"style="width:29%">About</a>
+      <a href="https://sns-sns-sns.github.io/auf-etwas/services.html" class="w3-bar-item" style="width:42%">Services & Clients</a>
+      <a href="https://www.instagram.com/evamikelatou?utm_source=qr" class="w3-bar-item"style="width:29%">Instagram</a>
+    </div>
+    <div class="w3-half">
+      <a href="https://sns-sns-sns.github.io/auf-etwas/index.html">
+      <img src="logo-4.png" alt="Logo" style="align-items: center; max-height: 20px; margin-top: 15px; margin-bottom: 15px;">
+    </a>
+    </div>
+  </div>
+
+
+
+  <main class="main container">
+    <div class="left-column w3-half">
+
+
+
+<video src="project6-in.mp4" style="align-items: center; max-height: 300px;"  autoplay controls></video>
+    
+    </div>
+
+    <div class="right-column w3-half text-div">
+      
+      <p style=" margin-top: 15px; margin-left: 30px;  margin-right: 40px; font-size:11px; text-align: left;"> 
+
+Cannes Film Festival <br>
+EX<br><br>
+Cornelsen Films<br>
+George Markakis<br>
+Eva Mikelatou<br>
+Mor Shauli<br>
+Tolis Apostolidis<br>
+Marie Fleuret<br>
+Avi Ben Nissan<br>
+M+1<br>
+
+<p>
+
+  </div>
+
+
+
+      <!-- Repeat the above project divs for the rest of the projects -->
+    </div>
+  </main>
+
+  <footer class="w3-bar footer">
+
+ 
+    <div class="w3-half w3-center" >
+
+<a href="index.html" style="margin-left: 20px; margin-top: 15px; text-size:7px;">Work</a>
+
+
+    </div>
+
+
+    <div class="w3-half w3-center" > 
+      <p style=" font-size:8px; text-align: center;"> &copy; 2023 Your Name. All rights reserved.</p>
+    </div>
+
+  </footer>
+
+
+
+
+  <script>
+  function showProjectImage(imageUrl) {
+    var projectImage = document.getElementById('project-image');
+    projectImage.setAttribute('src', imageUrl);
+    projectImage.style.display = 'block';
+  }
+
+  function hideProjectImage() {
+    var projectImage = document.getElementById('project-image');
+    projectImage.style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Select the carousel container
+    const container = document.querySelector('.carousel-container');
+
+    // Clone the list
+    const originalList = document.querySelector('.carousel-list');
+    const clonedList = originalList.cloneNode(true);
+    container.appendChild(clonedList);
+
+    // Calculate the total height of the list
+    const totalHeight = originalList.offsetHeight * 2;
+
+    // Add event listeners for both mouse and touch events
+    container.addEventListener('wheel', handleScroll);
+
+    // Variables to track touch events
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    function handleScroll(event) {
+  event.preventDefault();
+
+  const scrollingDown = event.deltaY > 0;
+  const shouldScrollToTop = scrollingDown && container.scrollTop + container.offsetHeight >= totalHeight;
+  const shouldScrollToBottom = !scrollingDown && container.scrollTop === 0;
+
+  if (shouldScrollToTop) {
+    container.scrollTop = 0;
+  } else if (shouldScrollToBottom) {
+    container.scrollTop = totalHeight - container.offsetHeight;
+  } else {
+    // Clone the list
+    const clonedList = originalList.cloneNode(true);
+    container.appendChild(clonedList);
+
+    container.scrollTop += event.deltaY;
+  }
+}
+
+  });
+</script>
+
+
+</body>
+</html>
